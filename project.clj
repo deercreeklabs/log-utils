@@ -1,4 +1,4 @@
-(defproject deercreeklabs/log-utils "0.1.0"
+(defproject deercreeklabs/log-utils "0.1.1-SNAPSHOT"
   :description "A logging and debug library for Clojure and ClojureScript."
   :url "http://www.deercreeklabs.com"
   :license {:name "Apache License, Version 2.0"
