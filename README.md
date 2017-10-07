@@ -1,7 +1,6 @@
 # log-utils
 
-A utility library with logging and debug functions for Clojure and
-Clojurescript.
+A logging and debug library for Clojure and ClojureScript.
 
 ## Installation via Leiningen / Clojars:
 
