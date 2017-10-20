@@ -79,3 +79,23 @@
         pps (map (fn [sym]
                    `(pprint-str ~sym)) syms)]
     `(debugf ~fmt-str ~@pps)))
+
+(defmacro do-spy [label x]
+  `(do
+     (debugf "= spy = %s: \n%s" ~label (pprint-str ~x))
+     ~x))
+
+(defmacro spy
+  "For debugging in -> expressions.  Identical to spy-first."
+  [x label]
+  `(do-spy ~label ~x))
+
+(defmacro spy-first
+  "For debugging in -> expressions. Identical to spy."
+  [x label]
+  `(do-spy ~label ~x))
+
+(defmacro spy-last
+  "For debugging in ->> expressions."
+  [label x]
+  `(do-spy ~label ~x))
