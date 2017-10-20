@@ -7,7 +7,7 @@
                  :deploy-via :clojars}
 
   ;; TODO: Figure out why chrome-test fails with this set
-  ;;  :pedantic? :abort
+  :pedantic? :abort
 
   :profiles
   {:dev
