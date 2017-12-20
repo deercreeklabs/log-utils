@@ -54,7 +54,7 @@
    {:global-vars {*warn-on-reflection* true}
     :repl-options {:init-ns user}
     :plugins
-    [[lein-ancient "0.6.14"]
+    [[lein-ancient "0.6.15"]
      [lein-cljsbuild "1.1.7" :exclusions [org.clojure/clojure]]
      [lein-cloverage "1.0.10" :exclusions [org.clojure/clojure]]
      [lein-doo "0.1.8"]
@@ -77,7 +77,7 @@
    [com.andrewmcveigh/cljs-time "0.5.2"]
    [com.taoensso/timbre "4.10.0"]
    [mvxcvi/puget "1.0.2"]
-   [org.clojure/clojure "1.9.0-beta4"]
+   [org.clojure/clojure "1.9.0"]
    [org.clojure/clojurescript "1.9.946"]
    [prismatic/schema "1.1.7"]]
 
