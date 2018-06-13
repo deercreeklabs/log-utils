@@ -38,7 +38,7 @@
              :compiler compiler}
       node-test? (assoc :notify-command ["node" output-to]))))
 
-(defproject deercreeklabs/log-utils "0.1.6-SNAPSHOT"
+(defproject deercreeklabs/log-utils "0.1.6"
   :description "A logging and debug library for Clojure and ClojureScript."
   :url "http://www.deercreeklabs.com"
   :license {:name "Apache License, Version 2.0"
