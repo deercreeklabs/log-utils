@@ -19,25 +19,25 @@
   [& syms]
   (zipmap (map keyword syms) syms))
 
-(s/defn get-exception-msg :- s/Str
+(s/defn ex-msg :- s/Str
   [e]
   #?(:clj (.toString ^Exception e)
      :cljs (.-message e)))
 
-(s/defn get-exception-stacktrace :- s/Str
+(s/defn ex-stacktrace :- s/Str
   [e]
   #?(:clj (clojure.string/join "\n" (map str (.getStackTrace ^Exception e)))
      :cljs (.-stack e)))
 
-(s/defn get-exception-msg-and-stacktrace :- s/Str
+(s/defn ex-msg-and-stacktrace :- s/Str
   [e]
   (str "\nException:\n"
-       (get-exception-msg e)
+       (ex-msg e)
        "\nStacktrace:\n"
-       (get-exception-stacktrace e)))
+       (ex-stacktrace e)))
 
-(defn log-exception [e]
-  (errorf (get-exception-msg-and-stacktrace e)))
+(defn log-ex [e]
+  (errorf (ex-msg-and-stacktrace e)))
 
 (s/defn short-log-output-fn :- s/Str
   [data :- {(s/required-key :level) s/Keyword
@@ -51,7 +51,7 @@
      "[" (or ?ns-str ?file "?") ":" (or ?line "?") "] - "
      @msg_)))
 
-(defn get-current-time-ms
+(defn current-time-ms
   []
   #?(:clj (System/currentTimeMillis)
      :cljs (.getTime (js/Date.))))

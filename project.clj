@@ -74,7 +74,7 @@
                           [source-map-support "0.4.17"]]}
 
   :dependencies
-  [[clj-time "0.14.4"]
+  [[clj-time "0.15.0"]
    [com.andrewmcveigh/cljs-time "0.5.2"]
    [com.taoensso/timbre "4.10.0"]
    [mvxcvi/puget "1.0.2" :exclusions [org.clojure/core.rrb-vector]]
