@@ -74,14 +74,15 @@
                           [source-map-support "0.4.17"]]}
 
   :dependencies
-  [[clj-time "0.15.0"]
+  [[clj-time "0.15.1"]
    [com.andrewmcveigh/cljs-time "0.5.2"]
    [com.taoensso/timbre "4.10.0"]
-   [mvxcvi/puget "1.0.2" :exclusions [org.clojure/core.rrb-vector]]
+   [mvxcvi/puget "1.0.3"]
    [org.clojure/clojure "1.9.0"]
-   [org.clojure/clojurescript "1.10.339"]
-   [prismatic/schema "1.1.9"]
-   [quantum/org.clojure.core.rrb-vector "0.0.12"]]
+   [org.clojure/clojurescript "1.10.439"
+    :exclusions [com.google.errorprone/error_prone_annotations
+                 com.google.code.findbugs/jsr305]]
+   [prismatic/schema "1.1.9"]]
 
   :cljsbuild
   {:builds
