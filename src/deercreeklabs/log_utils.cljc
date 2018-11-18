@@ -2,6 +2,7 @@
   (:require
    [#?(:clj clj-time.format :cljs cljs-time.format) :as f]
    [#?(:clj clj-time.core :cljs cljs-time.core) :as t]
+   [clojure.string :as string]
    #?(:clj [puget.printer :refer [cprint]])
    [schema.core :as s]
    [taoensso.timbre :as timbre :refer [debugf errorf infof]])
@@ -74,7 +75,7 @@
 (defmacro debugs [& syms]
   (let [fmt-str (->> syms
                      (map #(str (name %) ": \n%s"))
-                     (clojure.string/join)
+                     (string/join)
                      (str "\n"))
         pps (map (fn [sym]
                    `(pprint-str ~sym)) syms)]
