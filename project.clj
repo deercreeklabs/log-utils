@@ -77,8 +77,8 @@
   [[clj-time "0.15.1"]
    [com.andrewmcveigh/cljs-time "0.5.2"]
    [com.taoensso/timbre "4.10.0"]
-   [mvxcvi/puget "1.0.3"]
-   [org.clojure/clojure "1.9.0"]
+   [mvxcvi/puget "1.1.0"]
+   [org.clojure/clojure "1.10.0"]
    [org.clojure/clojurescript "1.10.439"
     :exclusions [com.google.errorprone/error_prone_annotations
                  com.google.code.findbugs/jsr305]]
